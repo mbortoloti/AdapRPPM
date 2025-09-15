@@ -18,3 +18,5 @@ puted. The second variant, in contrast, does not require such knowledge, thus
 broadening its applicability. We analyze the complexity of both approaches,
 establish their convergence, and illustrate their effectiveness through numerical
 experiments.
+
+
