@@ -14,10 +14,6 @@ function build_grad_fk(M :: mf.AbstractManifold, Y :: Matrix{Float64}, Zk :: Mat
     return r_grad_g1_Y - λk * mf.log(M,Y,Zk)
 
 end
-###########################################################################################################
-#function symm(Z)
-#    return 0.5 * (Z + la.transpose(Z))
-#end
 
 ###########################################################################################################
 function adap_rppm(M :: mf.AbstractManifold, X0 :: Matrix{Float64}, g1 :: Function, grad_g1 :: Function, 
