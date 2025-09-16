@@ -1,5 +1,5 @@
 using LinearAlgebra
-
+using Manifolds
 
 include("adap_rppm.jl")
 
@@ -13,22 +13,21 @@ ngueses = 1;
 
 #seed = MersenneTwister(1234)
 
-    g1(_,X) = logdet(X)^4 / 12.0
-    grad_g1(_,X) = logdet(X)^3 * inv(X) / 3.0
+# g1 function 
+g1(_,X) = logdet(X)^4 / 12.0
+grad_g1(_,X) = logdet(X)^3 * inv(X) / 3.0
 
-
-    g2(_,X) = logdet(X)^2
+# g2 function
+g2(_,X) = logdet(X)^2
 grad_g2(_,X) = 2.0 * logdet(X) * inv(X)
 
+# h function
 h(M,X) = logdet(X)
 ∂h(M,X) = inv(X)
-
-
-
-       
+      
     
 # Set Manifold
-M = mf.SymmetricPositiveDefinite(n)
+M = SymmetricPositiveDefinite(n)
 
 #  Initial guess
 X0 = log(n)*Matrix{Float64}(I,n,n)
