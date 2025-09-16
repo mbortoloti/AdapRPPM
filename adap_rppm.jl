@@ -101,9 +101,6 @@ function adap_rppm(M :: mf.AbstractManifold, X0 :: Matrix{Float64}, g1 :: Functi
         # Print info
         println(iter,"  ",dist_Xk_Yk,"   ",f_Xk,"   ",λk)
         
-        # Update sequence
-        #Xk = Yk
-
     end
     
     return -1,-1,-1,-1
