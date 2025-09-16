@@ -20,3 +20,7 @@ establish their convergence, and illustrate their effectiveness through numerica
 experiments.
 
 
+Please, see the file "EXAMPLE.jl".
+
+
+Minimize $$f(X)=g_1(X)+g_2(X)-h(X)$$
